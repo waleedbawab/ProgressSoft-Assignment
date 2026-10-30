@@ -1,0 +1,22 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-24.04"
+
+  config.vm.hostname = "progresssoft-tomcat"
+
+  config.vm.network "forwarded_port",
+    guest: 7070,
+    host: 9090
+
+config.vm.network "forwarded_port",
+  guest: 80,
+  host: 80
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "ProgressSoft-Tomcat"
+    vb.memory = 2048
+    vb.cpus = 1
+  end
+
+  config.vm.provision "shell",
+    path: "provision.sh"
+end
