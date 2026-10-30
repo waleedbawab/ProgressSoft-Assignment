@@ -114,6 +114,16 @@ Tomcat WAR deployment is working successfully!
 
 This confirms that the Docker image was built, published, pulled, and successfully used to run the web application.
 
+## PostgreSQL Container Verification
+
+The PostgreSQL container was tested using:
+
+docker exec -it progresssoft-postgres psql -U postgres -c "SELECT version();"
+
+Result: The command successfully connected to PostgreSQL and returned the database server version (PostgreSQL 16.5).
+
+This confirms that the PostgreSQL Docker container is running and accepting database commands.
+
 11. Conclusion
 
 The Docker containerization task was successfully implemented and tested. The application was packaged as a WAR file, deployed to Apache Tomcat inside a Docker container, and the resulting image was published to Docker Hub.
@@ -140,3 +150,14 @@ curl http://localhost:8081
 Result: The request successfully returned the ProgressSoft application HTML page hosted on Tomcat.
 
 This confirms that Nginx successfully forwarded the HTTP request to the Tomcat application.
+
+
+## Kubernetes Deployment Verification
+
+The Kubernetes deployment was verified successfully.
+
+### Deployment Status
+
+Command:
+```bash
+kubectl get deployment sample-web

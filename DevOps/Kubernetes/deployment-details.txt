@@ -1,0 +1,2 @@
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES       SELECTOR
+sample-web   3/3     3            3           29m   nginx        nginx:1.27   app=sample-web

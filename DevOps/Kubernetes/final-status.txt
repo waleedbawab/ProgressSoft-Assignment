@@ -1,0 +1,9 @@
+NAME                         STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION             CONTAINER-RUNTIME
+progresssoft-control-plane   Ready    control-plane   5m22s   v1.37.0   172.18.0.2    <none>        Debian GNU/Linux 13 (trixie)   6.8.0-1064-azure (amd64)   containerd://2.3.4
+NAME                          READY   STATUS    RESTARTS   AGE     IP           NODE                         NOMINATED NODE   READINESS GATES
+sample-web-6b6bbd5f4b-jqtc4   1/1     Running   0          3m52s   10.244.0.7   progresssoft-control-plane   <none>           <none>
+sample-web-6b6bbd5f4b-p6s9m   1/1     Running   0          67s     10.244.0.8   progresssoft-control-plane   <none>           <none>
+sample-web-6b6bbd5f4b-zzlpp   1/1     Running   0          5m11s   10.244.0.6   progresssoft-control-plane   <none>           <none>
+NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP   5m20s
+sample-web   ClusterIP   10.96.68.148   <none>        80/TCP    5m13s

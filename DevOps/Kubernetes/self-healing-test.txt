@@ -1,0 +1,7 @@
+# Kubernetes Self-Healing Test
+A pod was manually deleted.
+Kubernetes automatically recreated the missing pod.
+NAME                          READY   STATUS    RESTARTS   AGE     IP           NODE                         NOMINATED NODE   READINESS GATES
+sample-web-6b6bbd5f4b-jqtc4   1/1     Running   0          2m56s   10.244.0.7   progresssoft-control-plane   <none>           <none>
+sample-web-6b6bbd5f4b-p6s9m   1/1     Running   0          11s     10.244.0.8   progresssoft-control-plane   <none>           <none>
+sample-web-6b6bbd5f4b-zzlpp   1/1     Running   0          4m15s   10.244.0.6   progresssoft-control-plane   <none>           <none>

@@ -1,0 +1,14 @@
+NAME                              READY   STATUS    RESTARTS   AGE   IP           NODE                         NOMINATED NODE   READINESS GATES
+pod/sample-web-6b6bbd5f4b-4kwvz   1/1     Running   0          83s   10.244.0.2   progresssoft-control-plane   <none>           <none>
+pod/sample-web-6b6bbd5f4b-jqtc4   1/1     Running   0          4s    10.244.0.7   progresssoft-control-plane   <none>           <none>
+pod/sample-web-6b6bbd5f4b-zzlpp   1/1     Running   0          83s   10.244.0.6   progresssoft-control-plane   <none>           <none>
+
+NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE   SELECTOR
+service/kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP   92s   <none>
+service/sample-web   ClusterIP   10.96.68.148   <none>        80/TCP    85s   app=sample-web
+
+NAME                         READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES       SELECTOR
+deployment.apps/sample-web   3/3     3            3           85s   nginx        nginx:1.27   app=sample-web
+
+NAME                                    DESIRED   CURRENT   READY   AGE   CONTAINERS   IMAGES       SELECTOR
+replicaset.apps/sample-web-6b6bbd5f4b   3         3         3       83s   nginx        nginx:1.27   app=sample-web,pod-template-hash=6b6bbd5f4b
